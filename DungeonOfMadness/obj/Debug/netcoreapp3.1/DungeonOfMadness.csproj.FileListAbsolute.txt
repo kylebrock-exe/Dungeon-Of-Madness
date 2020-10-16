@@ -1,0 +1,13 @@
+C:\Users\kuden\source\repos\DungeonOfMadness\DungeonOfMadness\obj\Debug\netcoreapp3.1\DungeonOfMadness.csprojAssemblyReference.cache
+C:\Users\kuden\source\repos\DungeonOfMadness\DungeonOfMadness\obj\Debug\netcoreapp3.1\DungeonOfMadness.AssemblyInfoInputs.cache
+C:\Users\kuden\source\repos\DungeonOfMadness\DungeonOfMadness\obj\Debug\netcoreapp3.1\DungeonOfMadness.AssemblyInfo.cs
+C:\Users\kuden\source\repos\DungeonOfMadness\DungeonOfMadness\obj\Debug\netcoreapp3.1\DungeonOfMadness.csproj.CoreCompileInputs.cache
+C:\Users\kuden\source\repos\DungeonOfMadness\DungeonOfMadness\bin\Debug\netcoreapp3.1\DungeonOfMadness.exe
+C:\Users\kuden\source\repos\DungeonOfMadness\DungeonOfMadness\bin\Debug\netcoreapp3.1\DungeonOfMadness.deps.json
+C:\Users\kuden\source\repos\DungeonOfMadness\DungeonOfMadness\bin\Debug\netcoreapp3.1\DungeonOfMadness.runtimeconfig.json
+C:\Users\kuden\source\repos\DungeonOfMadness\DungeonOfMadness\bin\Debug\netcoreapp3.1\DungeonOfMadness.runtimeconfig.dev.json
+C:\Users\kuden\source\repos\DungeonOfMadness\DungeonOfMadness\bin\Debug\netcoreapp3.1\DungeonOfMadness.dll
+C:\Users\kuden\source\repos\DungeonOfMadness\DungeonOfMadness\bin\Debug\netcoreapp3.1\DungeonOfMadness.pdb
+C:\Users\kuden\source\repos\DungeonOfMadness\DungeonOfMadness\obj\Debug\netcoreapp3.1\DungeonOfMadness.dll
+C:\Users\kuden\source\repos\DungeonOfMadness\DungeonOfMadness\obj\Debug\netcoreapp3.1\DungeonOfMadness.pdb
+C:\Users\kuden\source\repos\DungeonOfMadness\DungeonOfMadness\obj\Debug\netcoreapp3.1\DungeonOfMadness.genruntimeconfig.cache
