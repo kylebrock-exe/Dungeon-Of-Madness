@@ -56,6 +56,7 @@ _____________________________________________
                 Console.WriteLine("|   [D]ifficulty:       "+ difP);
                 Console.WriteLine("****************************");
                 Console.WriteLine("     [E]xit The Shop     ");
+                Console.WriteLine("  [Q]uit/Save The Game   ");
                 Console.WriteLine();
                 Console.WriteLine(p.name+"'s Stats           ");
                 Console.WriteLine("****************************");
@@ -89,6 +90,10 @@ _____________________________________________
                 else if (input == "e" || input == "exit")
                 {
                     break;
+                }
+                else if (input == "q" || input == "quit")
+                {
+                    Program.Quit();
                 }
             }
         }

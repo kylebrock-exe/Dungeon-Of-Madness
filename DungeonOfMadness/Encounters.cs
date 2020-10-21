@@ -4,16 +4,21 @@ using System.Text;
 
 namespace DungeonOfMadness
 {
-    public class Encounters
+    public class Encounters 
     {
+
+        //Random
         static Random rand = new Random();
-        //Encounter Generic
+
+
+        
 
 
         //Encounters
         public static void FirstEncounter()
         {
-            Console.WriteLine("Standing before thou is greasy morbidly obese Lizard Man!");
+            Print("Standing before thou is a greasy morbidly obese Lizard Man!");
+            Console.ReadKey();
             string lizardMan = @"
                                              ,--,  ,.-.
                ,                   \,       '-,-`,'-.' | ._
@@ -41,14 +46,44 @@ namespace DungeonOfMadness
             ";
             Console.WriteLine(lizardMan);
             Console.ReadKey();
-            Console.WriteLine("Unthinking, thou grabs a conviently placed rusty sword and charge the bloated reptile!");
+            Print("Unthinking, thou grabs a conviently placed rusty sword and charge the bloated reptile!");
+            Console.ReadKey();
+            Console.Clear();
+            string vertSword = @"
+
+            .-.
+           (0.0)
+         '=.|m|.='
+         .='/@\`=.
+            @8@
+        _   8@8   _
+       (@__/@8@\__@)
+        `-=:8@8:=-'
+            |:|
+            |:|
+            |:|
+            |:|
+            |:|
+            |:|
+            |:|
+            |:|
+            |:|
+            |:|
+            |:|
+            |:|
+            \:/
+             ^
+";
+            Print(vertSword,1);
+            Print("A strange aura eminates from this sword...");
+            Print("Thou aren't sure if it is magical in nature or perhaps just acrid poop smells.");
             Console.ReadKey();
             Combat(false, "Obese Lizard Man", 1, 4);
         }
         public static void BasicFightEncounter()
         {
             Console.Clear();
-            Console.WriteLine("Turning the corner thou spots a monstrosity heading thou's way!");
+            Print("Turning the corner thou spots a monstrosity heading thou's way!");
             Console.ReadKey();
             Combat(true,"",0,0);
 
@@ -56,7 +91,7 @@ namespace DungeonOfMadness
         public static void WizardEncounter()
         {
             Console.Clear();
-            Console.WriteLine("As thou opens the door thou hears a crackling of arcane energy as a demented old man appears before thou!");
+            Print("As thou opens the door thou hears a crackling of arcane energy as a demented old man appears before thou!");
             Console.ReadKey();
             Console.Clear();
             string darkWizard = @"
@@ -88,10 +123,10 @@ namespace DungeonOfMadness
            ||                ,'   /    |
 ";
             Console.WriteLine(darkWizard);
-            Console.WriteLine("Thou dare interrupts my studies!? Have thee no respect for the ARCANE ARTS!?");
+            Print("Thou dare interrupts my studies!? Have thee no respect for the ARCANE ARTS!?");
             Console.ReadKey();
             Console.Clear();
-            Console.WriteLine("No, I don't because...");
+            Print("No, I don't because...");
             Console.ReadKey();
             string magicNerd = @"
 .___  ___.      ___       _______  __    ______     __       _______.
@@ -122,17 +157,151 @@ namespace DungeonOfMadness
             Combat(false, "Dark Wizard", 4, 2);
         }
 
+        public static void SkeletonEncounter()
+        {
+            Console.Clear();
+            Print("Thou passes by a crypt and hear sound that reminds ye of thou's NaNa getting up from her chair...");
+            Print("The creaking of bone becomes more rapid as thou sees a skeleton charging towards you!");
+            Console.ReadKey();
+            Console.Clear();
+            string skeletonWarrior = @"
+                  .7
+                .'/
+               / /
+              / /
+             / /
+            / /
+           / /
+          / /
+         / /         
+        / /          
+      __|/
+    ,-\__\
+    |f- Y\|
+    \()7L /
+     cgD                            __ _
+     |\(                          .'  Y ' >,
+      \ \                        / _   _   \
+       \\\                       )(_)(_)    )
+        \\\                      {  4A     /
+         \\\                      \uLuJJ/\l
+          \\\                     |3    p)/
+           \\\___ __________      /nnm_n /
+           c7___-__,__-)\,__)(.  \_>-<_/D
+                      /V     \_-._.__G G_c__.-_/ ( \
+                             </-._>__-,G_.___)\   \7\
+                            (\-.__.| \|<.__.-/ )   \ \
+                            |\-.__||  ||-.__.--)   \ \
+                            (\-.__||  |-.__.--)     \_\
+                            \\-.__||  ||-.__.-)     \ \
+                             \-.__||  ||-.__.)      \ l
+
+";
+            Console.WriteLine(skeletonWarrior);
+            Print("SCREEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEECH!");
+            Console.ReadKey();
+            Console.Clear();
+            Print("Hey buddy...");
+            Console.ReadKey();
+            string magicNerd = @"
+.___                  __             ___.                            __          
+|   |    ____   _____/  |_  _____    \_ |__   ____   ____   ____   _/  |_  ____  
+|   |   / ___\ /  _ \   __\ \__  \    | __ \ /  _ \ /    \_/ __ \  \   __\/  _ \ 
+|   |  / /_/  >  <_> )  |    / __ \_  | \_\ (  <_> )   |  \  ___/   |  | (  <_> )
+|___|  \___  / \____/|__|   (____  /  |___  /\____/|___|  /\___  >  |__|  \____/ 
+      /_____/                    \/       \/            \/     \/                
+            .__        __             .__  __  .__                          ._.  
+     ______ |__| ____ |  | __ __  _  _|__|/  |_|  |__    ___.__. ____  __ __| |  
+     \____ \|  |/ ___\|  |/ / \ \/ \/ /  \   __\  |  \  <   |  |/  _ \|  |  \ |  
+     |  |_> >  \  \___|    <   \     /|  ||  | |   Y  \  \___  (  <_> )  |  /\|  
+     |   __/|__|\___  >__|_ \   \/\_/ |__||__| |___|  /  / ____|\____/|____/ __  
+     |__|           \/     \/                       \/   \/                  \/ 
+                                                            
+";
+            Console.WriteLine(magicNerd);
+            Console.ReadKey();
+            Console.Clear();
+            Combat(false, "Spooky Skeleton", 4, 2);
+        }
+
+        public static void GargoyleEncounter()
+        {
+            Console.Clear();
+            Print("A small statue in this chamber starts to cracking a smile at thee...");
+            Print("You think nothing of it...wait...");
+            Console.ReadKey();
+            Console.Clear();
+            Print("STATUES DON'T SMILE!!!");
+            Console.ReadKey();
+            Console.Clear();
+            string gargoyle = @"
+ ,                                                               ,
+ \'.                                                           .'/
+  ),\                                                         /,( 
+ /__\'.                                                     .'/__\
+ \  `'.'-.__                                           __.-'.'`  /
+
+  `)   `'-. \                                         / .-'`   ('
+  /   _.--'\ '.          ,               ,          .' /'--._   \
+  |-'`      '. '-.__    / \             / \    __.-' .'      `'-|
+  \         _.`'-.,_'-.|/\ \    _,_    / /\|.-'_,.-'`._         /
+   `\    .-'       /'-.|| \ |.-'   '-.| / ||.-'\       '-.    /`
+     )-'`        .'   :||  / -.\\ //.- \  ||:   '.        `'-(
+    /          .'    / \\_ |  /o`^'o\  | _// \    '.          \
+    \       .-'    .'   `--|  `'/ \'`  |--`   '.    '-.       /
+     `)  _.'     .'.--.;     |\__'__/| ; .--.    '.     '._  ('
+     / _.'     .-'  _.- '   \\ \/^\/ //     `-._  ' -.     '._\
+     \     .'`_.--'          \\     //          `--._`'.     /
+      '-._' /`            _   \\-.-//   _            `\ '_.-'
+          `< _,..--''`    |    \`'`/    |`''--..,_     >`
+           _\  ``--..__   \     `'`     /   __..--``  /_
+    
+";
+            Console.WriteLine(gargoyle);
+            Print("PREPARE TO STONED ADVENTURER!!!");
+            Console.ReadKey();
+            Console.Clear();
+            Print("Wait...was that a joke?");
+            Console.ReadKey();
+            string hilarious = @"
+______                                 _____ _           _   _     
+| ___ \                               |_   _| |         | | ( )    
+| |_/ / ___  ___ __ _ _   _ ___  ___    | | | |__   __ _| |_|/ ___ 
+| ___ \/ _ \/ __/ _` | | | / __|/ _ \   | | | '_ \ / _` | __| / __|
+| |_/ /  __/ (_| (_| | |_| \__ \  __/   | | | | | | (_| | |_  \__ \
+\____/ \___|\___\__,_|\__,_|___/\___|   \_/ |_| |_|\__,_|\__| |___/
+                                                                   
+                                                                   
+ _   _ _____ _       ___  ______ _____ _____ _   _ _____ _ _ _     
+| | | |_   _| |     / _ \ | ___ \_   _|  _  | | | /  ___| | | |    
+| |_| | | | | |    / /_\ \| |_/ / | | | | | | | | \ `--.| | | |    
+|  _  | | | | |    |  _  ||    /  | | | | | | | | |`--. \ | | |    
+| | | |_| |_| |____| | | || |\ \ _| |_\ \_/ / |_| /\__/ /_|_|_|    
+\_| |_/\___/\_____/\_| |_/\_| \_|\___/ \___/ \___/\____/(_|_|_)
+                                                          
+";
+            Console.WriteLine(hilarious);
+            Console.ReadKey();
+            Console.Clear();
+            Combat(false, "Goofy Gargoyle", 3, 3);
+        }
 
         //Encounter Tools
         public static void RandomEncounter()
         {
-            switch (rand.Next(0, 2))
+            switch (rand.Next(0, 4))
             {
                 case 0:
                     BasicFightEncounter();
                     break;
                 case 1:
                     WizardEncounter();
+                    break;
+                case 2:
+                    SkeletonEncounter();
+                    break;
+                case 3:
+                    GargoyleEncounter();
                     break;
             }
         }
@@ -143,7 +312,7 @@ namespace DungeonOfMadness
             int h = 0;
             if (random)
             {
-                n = GetName();
+                
                 p = Program.currentPlayer.getPower();
                 h = Program.currentPlayer.getHealth();
             }
@@ -262,24 +431,19 @@ namespace DungeonOfMadness
             Console.ReadKey();
         }
 
-        public static string GetName()
+
+        public static void Print(string text, int speed = 40)
         {
-            switch (rand.Next(0, 4))
+            //SoundPlayer soundPlayer = new SoundPlayer("sounds/type.wav");
+            //soundPlayer.PlayLooping();
+            foreach (char c in text)
             {
-                case 0:
-                    return "Goopy Skeleton";
-                    
-                case 1:
-                    return "Obese Lizard Man";
-                    
-                case 2:
-                    return "Rancid Zombie";
-                   
-                case 3:
-                    return "Smelly Cultist";
-                    
+                Console.Write(c);
+                System.Threading.Thread.Sleep(speed);
             }
-            return "Gassy Gnome";
+            //soundPlayer.Stop();
+            Console.WriteLine();
         }
+
     }
 }
