@@ -28,7 +28,7 @@ _____________________________________________
 ||      /           `         /`    `\   | ||
 ";
             Console.WriteLine(shopKeep);
-            Console.WriteLine("Welcome! I've got alot of good things on sale...stranger.");
+            Console.WriteLine("Welcome to my realm. I pray thee brought me some gold.");
             Console.ReadKey();
             Console.Clear();
             RunShop(p);

@@ -10,74 +10,10 @@ namespace DungeonOfMadness
         //Random
         static Random rand = new Random();
 
-
         
-
-
         //Encounters
         public static void FirstEncounter()
         {
-            Print("Standing before thou is a greasy morbidly obese Lizard Man!");
-            Console.ReadKey();
-            string lizardMan = @"
-                                             ,--,  ,.-.
-               ,                   \,       '-,-`,'-.' | ._
-              /|           \    ,   |\         }  )/  / `-,',
-              [ ,          |\  /|   | |        /  \|  |/`  ,`
-              | |       ,.`  `,` `, | |  _,...(   (      .',
-              \  \  __ ,-` `  ,  , `/ |,'      Y     (   /_L\
-               \  \_\,``,   ` , ,  /  |         )         _,/
-                \  '  `  ,_ _`_,-,<._.<        /         /
-                 ', `>.,`  `  `   ,., |_      |         /
-                   \/`  `,   `   ,`  | /__,.-`    _,   `\
-               -,-..\  _  \  `  /  ,  / `._) _,-\`       \
-                \_,,.) /\    ` /  / ) (-,, ``    ,        |
-               ,` )  | \_\       '-`  |  `(               \
-              /  /```(   , --, ,' \   |`<`    ,            |
-             /  /_,--`\   <\  V /> ,` )<_/)  | \      _____)
-       ,-, ,`   `   (_,\ \    |   /) / __/  /   `----`
-      (-, \           ) \ ('_.-._)/ /,`    /
-      | /  `          `/ \\ V   V, /`     /
-   ,--\(        ,     <_/`\\     ||      /
-  (   ,``-     \/|         \-A.A-`|     /
- ,>,_ )_,..(    )\          -,,_-`  _--`
-(_ \|`   _,/_  /  \_            ,--`
- \( `   <.,../`     `-.._   _,-`
-            ";
-            Console.WriteLine(lizardMan);
-            Console.ReadKey();
-            Print("Unthinking, thou grabs a conviently placed rusty sword and charge the bloated reptile!");
-            Console.ReadKey();
-            Console.Clear();
-            string vertSword = @"
-
-            .-.
-           (0.0)
-         '=.|m|.='
-         .='/@\`=.
-            @8@
-        _   8@8   _
-       (@__/@8@\__@)
-        `-=:8@8:=-'
-            |:|
-            |:|
-            |:|
-            |:|
-            |:|
-            |:|
-            |:|
-            |:|
-            |:|
-            |:|
-            |:|
-            |:|
-            \:/
-             ^
-";
-            Print(vertSword,1);
-            Print("A strange aura eminates from this sword...");
-            Print("Thou aren't sure if it is magical in nature or perhaps just acrid poop smells.");
-            Console.ReadKey();
             Combat(false, "Obese Lizard Man", 1, 4);
         }
         public static void BasicFightEncounter()
@@ -286,10 +222,63 @@ ______                                 _____ _           _   _
             Combat(false, "Goofy Gargoyle", 3, 3);
         }
 
+        public static void MinotaurEncounter()
+        {
+            Console.Clear();
+            Print("As ye approaches the corner you hear clipping and clopping in the distance...");
+            Print("Upon rounding the corner the hair on the back ye neck stands up as...");
+            Console.ReadKey();
+            Console.Clear();
+            Print("THE CLOPPING INTENSIFIES!");
+            Console.ReadKey();
+            Console.Clear();
+            string minotaur = @"
+         ,     .
+        /(     )\               A
+   .--.( `.___.' ).--.         /_\
+   `._ ` \&%#%$/ ' _.'     /| <___> |\
+      `|(@\*%%/@)|'       / (  |L|  ) \
+       |  |%%#|  |       J d8bo|=|od8b L
+        \ \$#%/ /        | 8888|=|8888 |
+        |\|%%#|/|        J Y8P |=| Y8P F
+        | (. .)%|         \ (  |L|  ) /
+    ___.'  `-'  `.___      \|  | |  |/
+  .'#*#`-       -'$#*`.       / )|
+ /#%^#%*_ *%^%_  #  %$%\    .J (__)
+ #&  . %%%#% ###%*.   *%\.-'&# (__)
+ % *J %.%#_|_#$.\J* \ %'#%*^   (__)
+ *#% J %$%%#|#$#$ J\%   *   .--|(_)
+ |% J\ `%%#|#%%' / `.   _.'    |L|
+ |#$%||` %%%$### '|   `-'      |L|
+ (#%%||` #$#$%%% '|            |L|
+ | ##||  $%%.%$%  |            |L|
+    
+";
+            Console.WriteLine(minotaur);
+            Print("Are you lost?");
+            Console.ReadKey();
+            Console.Clear();
+            Print("Because I sure as heck am!");
+            Console.ReadKey();
+            string beef = @"
+ __      __           ________        __    __________               _____ 
+/  \    /  \ ____    /  _____/  _____/  |_  \______   \ ____   _____/ ____\
+\   \/\/   // __ \  /   \  ___ /  _ \   __\  |    |  _// __ \_/ __ \   __\ 
+ \        /\  ___/  \    \_\  (  <_> )  |    |    |   \  ___/\  ___/|  |   
+  \__/\  /  \___  >  \______  /\____/|__|    |______  /\___  >\___  >__|   
+       \/       \/          \/                      \/     \/     \/     
+                                                          
+";
+            Console.WriteLine(beef);
+            Console.ReadKey();
+            Console.Clear();
+            Combat(false, "Manly Minotaur", 3, 4);
+        }
+
         //Encounter Tools
         public static void RandomEncounter()
         {
-            switch (rand.Next(0, 4))
+            switch (rand.Next(0, 5))
             {
                 case 0:
                     BasicFightEncounter();
@@ -302,6 +291,9 @@ ______                                 _____ _           _   _
                     break;
                 case 3:
                     GargoyleEncounter();
+                    break;
+                case 4:
+                    MinotaurEncounter();
                     break;
             }
         }

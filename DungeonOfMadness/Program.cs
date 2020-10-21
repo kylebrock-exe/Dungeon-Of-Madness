@@ -27,7 +27,11 @@ namespace DungeonOfMadness
                       /\/\   __ _  __| |_ __   ___  ___ ___ 
                      /    \ / _` |/ _` | '_ \ / _ \/ __/ __|
                     / /\/\ \ (_| | (_| | | | |  __/\__ \__ \
-                    \/    \/\__,_|\__,_|_| |_|\___||___/___/                     
+                    \/    \/\__,_|\__,_|_| |_|\___||___/___/     
+ ___           __                   _    _    __                                  
+  | |_   _    (_        _  ._ _|   / \ _|_   /__ |  _. ._ _  |_   _| ._ o ._   _  
+  | | | (/_   __) \/\/ (_) | (_|   \_/  |    \_| | (_| | | | |_) (_| |  | | | (_| 
+                                                                               _| 
                     A Silly Console RPG By Kyle Brock   2020                ";
 
             Print(title, 1);
@@ -49,7 +53,7 @@ namespace DungeonOfMadness
             }
         }
 
-        static Player newStart(int i)
+        static public Player newStart(int i)
         {
             Console.Clear();
             Player p = new Player();
@@ -58,7 +62,7 @@ namespace DungeonOfMadness
             p.name = Console.ReadLine();
             p.id = 1;
             if (p.name == "")
-            {
+            { 
                 Print("Ooooooh. Not having a name is pretty edgy. Probably a little too edgy for this game...");
                 Print("What is thy name adventurer?");
                 p.name = Console.ReadLine();
@@ -80,6 +84,77 @@ namespace DungeonOfMadness
             Console.ReadKey();
             Console.Clear();
             Print("The door swings outward and you find thyself face to face with your captor!");
+            Console.ReadKey();
+            Print("Standing before thou is a greasy morbidly obese Lizard Man!");
+            Console.ReadKey();
+            string lizardMan = @"
+                                             ,--,  ,.-.
+               ,                   \,       '-,-`,'-.' | ._
+              /|           \    ,   |\         }  )/  / `-,',
+              [ ,          |\  /|   | |        /  \|  |/`  ,`
+              | |       ,.`  `,` `, | |  _,...(   (      .',
+              \  \  __ ,-` `  ,  , `/ |,'      Y     (   /_L\
+               \  \_\,``,   ` , ,  /  |         )         _,/
+                \  '  `  ,_ _`_,-,<._.<        /         /
+                 ', `>.,`  `  `   ,., |_      |         /
+                   \/`  `,   `   ,`  | /__,.-`    _,   `\
+               -,-..\  _  \  `  /  ,  / `._) _,-\`       \
+                \_,,.) /\    ` /  / ) (-,, ``    ,        |
+               ,` )  | \_\       '-`  |  `(               \
+              /  /```(   , --, ,' \   |`<`    ,            |
+             /  /_,--`\   <\  V /> ,` )<_/)  | \      _____)
+       ,-, ,`   `   (_,\ \    |   /) / __/  /   `----`
+      (-, \           ) \ ('_.-._)/ /,`    /
+      | /  `          `/ \\ V   V, /`     /
+   ,--\(        ,     <_/`\\     ||      /
+  (   ,``-     \/|         \-A.A-`|     /
+ ,>,_ )_,..(    )\          -,,_-`  _--`
+(_ \|`   _,/_  /  \_            ,--`
+ \( `   <.,../`     `-.._   _,-`
+            ";
+            Console.WriteLine(lizardMan);
+            Console.ReadKey();
+            Print("Unthinking, thou grabs a conviently placed rusty sword and charge the bloated reptile!");
+            Console.ReadKey();
+            Console.Clear();
+            string vertSword = @"
+
+            .-.
+           (0.0)
+         '=.|m|.='
+         .='/@\`=.
+            @8@
+        _   8@8   _
+       (@__/@8@\__@)
+        `-=:8@8:=-'
+            |:|
+            |:|
+            |:|
+            |:|
+            |:|
+            |:|
+            |:|
+            |:|
+            |:|
+            |:|
+            |:|
+            |:|
+            \:/
+             ^
+";
+            Print(vertSword, 1);
+            Print("A strange aura eminates from this sword...");
+            Print("Thou aren't sure if it is magical in nature or perhaps just acrid poop smells.");
+            Console.ReadKey();
+            Console.Clear();
+            Print("A voice speaks withing thine mind's eye...");
+            Console.ReadKey();
+            Print(p.name + ", thou have been chosen to wield me...the ultimate blade Glambdring!");
+            Console.ReadKey();
+            Print("If thou wishes to leave this dungeon alive, thou must empower with me gold!");
+            Console.ReadKey();
+            Print("Slaughter the monsters within this dungeon, and speak the magic word '[R]un' to enter my realm");
+            Print("and bestow upon me their ill gotten goods, and I shall empower you to defeat your captors!");
             Console.ReadKey();
             return p;
         }
