@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-
 namespace DungeonOfMadness
 {
     public class Encounters 
@@ -176,7 +175,6 @@ namespace DungeonOfMadness
   ),\                                                         /,( 
  /__\'.                                                     .'/__\
  \  `'.'-.__                                           __.-'.'`  /
-
   `)   `'-. \                                         / .-'`   ('
   /   _.--'\ '.          ,               ,          .' /'--._   \
   |-'`      '. '-.__    / \             / \    __.-' .'      `'-|
@@ -278,21 +276,18 @@ ______                                 _____ _           _   _
         //Encounter Tools
         public static void RandomEncounter()
         {
-            switch (rand.Next(0, 5))
+            switch (rand.Next(0, 4))
             {
                 case 0:
-                    BasicFightEncounter();
-                    break;
-                case 1:
                     WizardEncounter();
                     break;
-                case 2:
+                case 1:
                     SkeletonEncounter();
                     break;
-                case 3:
+                case 2:
                     GargoyleEncounter();
                     break;
-                case 4:
+                case 3:
                     MinotaurEncounter();
                     break;
             }
@@ -329,12 +324,12 @@ ______                                 _____ _           _   _
 ";
                 Console.WriteLine(swordArt);
                 Console.WriteLine(n);
-                Console.WriteLine(p + "/" + h);
-                Console.WriteLine("*************************");
-                Console.WriteLine("|   [A]ttack [D]efend   |");
-                Console.WriteLine("|   [R]un    [H]eal     |");
-                Console.WriteLine("*************************");
-                Console.WriteLine(" Potions: "+Program.currentPlayer.potion+" Health: "+Program.currentPlayer.health);
+                Console.WriteLine("Enemy Power: " + p + " | Enemy Health: " + h);
+                Console.WriteLine("***************************************");
+                Console.WriteLine("||         [A]ttack [D]efend         ||");
+                Console.WriteLine("||         [R]un    [H]eal           ||");
+                Console.WriteLine("***************************************");
+                Console.WriteLine(" Potions: "+ Program.currentPlayer.potion +" Health: "+Program.currentPlayer.health);
                 string input = Console.ReadLine();
                 if(input.ToLower() == "a"||input.ToLower() =="attack")
                 {
@@ -404,6 +399,7 @@ ______                                 _____ _           _   _
                         if (damage < 0)
                             damage = 0;
                         Console.WriteLine("You lose " + damage + " health!");
+                        Program.currentPlayer.potion -= 1;
                     }
                     Console.ReadKey();
                 }
@@ -426,14 +422,12 @@ ______                                 _____ _           _   _
 
         public static void Print(string text, int speed = 40)
         {
-            //SoundPlayer soundPlayer = new SoundPlayer("sounds/type.wav");
-            //soundPlayer.PlayLooping();
+           
             foreach (char c in text)
             {
                 Console.Write(c);
                 System.Threading.Thread.Sleep(speed);
             }
-            //soundPlayer.Stop();
             Console.WriteLine();
         }
 

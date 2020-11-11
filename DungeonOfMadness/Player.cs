@@ -19,6 +19,7 @@ namespace DungeonOfMadness
 
         public int mods = 0;
 
+         
         public int getHealth()
         {
             int upper = (2 * mods + 5);
@@ -28,8 +29,8 @@ namespace DungeonOfMadness
 
         public int getPower()
         {
-            int upper = (2 * mods + 2);
-            int lower = (mods + 1);
+            int upper = (5 * mods + 500);
+            int lower = (mods + 100);
             return Program.rand.Next(lower, upper);
         }
 

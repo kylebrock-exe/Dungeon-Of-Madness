@@ -5,7 +5,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Media;
 
 namespace DungeonOfMadness
-{
+{ 
     public class Program
     {
         public static Random rand = new Random();
@@ -259,14 +259,11 @@ namespace DungeonOfMadness
         }
         public static void Print(string text, int speed = 40)
         {
-            //SoundPlayer soundPlayer = new SoundPlayer("sounds/bookFlip1.wav");
-            //soundPlayer.PlayLooping();
             foreach (char c in text)
             {
                 Console.Write(c);
                 System.Threading.Thread.Sleep(speed);
             }
-            //soundPlayer.Stop();
             Console.WriteLine();
         }
     }
