@@ -273,6 +273,90 @@ ______                                 _____ _           _   _
             Combat(false, "Manly Minotaur", 3, 4);
         }
 
+        public static void FinalEncounter()
+        {
+            Console.Clear();
+            Print("Thou has empowered thy magical shop sword, Glambdring, with much gold and blood.");
+            Print("Thine blade glows and crackles with an otherworldly power.");
+            Print("Thou steels thyself as you come upon are large set of double doors with a large sign saying 'EXIT' above them.");
+            Print("Thou kicks in the door!");
+            Console.ReadKey();
+            Console.Clear();
+            Print("In the center of this large chamber thou sees the spirit of the blade manifest!");
+            Print("It says unto thee, 'Good job dork! Twas I whom bound you to this dungeon and now that you have given me strangth I shall take over your body and leave here in order to take over your pathetic world!!!");
+            Console.ReadKey();
+            Console.Clear();
+            string death = @"
+                                         .----..__
+                     _                     []       ``-.._
+                  .'` `'.                  ||__           `-._
+                 /    ,-.\                 ||_ ```---..__     `-.
+                /    /:::\\               /|//}          ``--._  `.
+                |    |:::||              |////}                `-. \
+                |    |:::||             //'///                    `.\
+                |    |:::||            //  ||'                      `|
+                /    |:::|/        _,-//\  ||
+               /`    |:::|`-,__,-'`  |/  \ ||
+             /`  |   |'' ||           \   |||
+           /`    \   |   ||            |  /||
+         |`       |  |   |)            \ | ||
+        |          \ |   /      ,.__    \| ||
+        /           `         /`    `\   | ||
+       |                     /        \  / ||
+       |                     |        | /  ||
+       /         /           |        `(   ||
+      /          .           /          )  ||
+
+";
+            Console.WriteLine(death);
+            Print("Welcome to your doom mortal!");
+            Console.ReadKey();
+            Console.Clear();
+            string death2 = @"
+                                           .----.._
+                                           []      `'--.._
+                                           ||__           `'-,
+                                         `)||_ ```'--..       \
+                     _                    /|//)        ``--._  |
+                  .'` `'.                /////)              `\/
+                 /  ....\              //{///    
+                /  /_  _`\\            // `||
+                | |(_)(_)||          _//   ||
+                | |  /\  )|        _///\   ||
+                | |L====J |       / |/ |   ||
+               /  /'-..-' /    .'`  \  |   ||
+              /   |  :: | |_.-`      |  \  ||
+             /|   `\-::.| |          \   | ||
+           /` `|   /    | |          |   / ||
+         |`    \   |    / /          \  |  ||
+        |       `\_|    |/      ,.__. \ |  ||
+        /                     /`    `\ ||  ||
+       |           .         /        \||  ||
+       |                     |         |/  ||
+       /         /           |         (   ||
+      /          .           /          )  ||                                         
+";
+            Console.WriteLine(death2);
+            Console.ReadKey();
+            Console.Clear();
+            string finaltext = @"
+ ____  __.__.__  .__    ________                 __  .__      .___  __                .__   _____._.
+|    |/ _|__|  | |  |   \______ \   ____ _____ _/  |_|  |__   |   |/  |_  ______ ____ |  |_/ ____\ |
+|      < |  |  | |  |    |    |  \_/ __ \\__  \\   __\  |  \  |   \   __\/  ___// __ \|  |\   __\| |
+|    |  \|  |  |_|  |__  |    `   \  ___/ / __ \|  | |   Y  \ |   ||  |  \___ \\  ___/|  |_|  |   \|
+|____|__ \__|____/____/ /_______  /\___  >____  /__| |___|  / |___||__| /____  >\___  >____/__|   __
+        \/                      \/     \/     \/          \/                 \/     \/            \/
+                                                          
+";
+            Console.WriteLine(finaltext);
+            Console.ReadKey();
+            Console.Clear();
+            Combat(false, "THE SPIRIT OF GLAMBDRING, DEATH", 10, 10);
+
+        }
+
+
+
         //Encounter Tools
         public static void RandomEncounter()
         {

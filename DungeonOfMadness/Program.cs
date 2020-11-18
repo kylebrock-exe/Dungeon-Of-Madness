@@ -11,7 +11,7 @@ namespace DungeonOfMadness
         public static Random rand = new Random();
         public static Player currentPlayer = new Player();
         public static bool mainLoop = true;
-        
+
 
         static void Main(string[] args)
         {
@@ -49,7 +49,58 @@ namespace DungeonOfMadness
             }
             while (mainLoop)
             {
-                Encounters.RandomEncounter();
+                if (Program.currentPlayer.mods >= 5)
+                {
+                    Encounters.FinalEncounter();
+                    Console.Clear();
+                    string endingtext = @"
+    __   ___   ____    ____  _       ____  ______  __ __  ____    ____  ______  ____  ___   ____   _____ __ 
+   /  ] /   \ |    \  /    || |     /    ||      ||  |  ||    \  /    ||      ||    |/   \ |    \ / ___/|  |
+  /  / |     ||  _  ||   __|| |    |  o  ||      ||  |  ||  D  )|  o  ||      | |  ||     ||  _  (   \_ |  |
+ /  /  |  O  ||  |  ||  |  || |___ |     ||_|  |_||  |  ||    / |     ||_|  |_| |  ||  O  ||  |  |\__  ||__|
+/   \_ |     ||  |  ||  |_ ||     ||  _  |  |  |  |  :  ||    \ |  _  |  |  |   |  ||     ||  |  |/  \ | __ 
+\     ||     ||  |  ||     ||     ||  |  |  |  |  |     ||  .  \|  |  |  |  |   |  ||     ||  |  |\    ||  |
+ \____| \___/ |__|__||___,_||_____||__|__|  |__|   \__,_||__|\_||__|__|  |__|  |____|\___/ |__|__| \___||__|
+                                                          
+";
+                    Console.WriteLine(endingtext);
+                    Print("Thou hast escaped the Dungeon of Madness!");
+                    Print("Thou hast completed a great game!");
+                    Print("And prooved the justice of our culture!");
+                    Print("Now go and rest our hero!");
+                    Console.ReadKey();
+                    Console.Clear();
+                    string theendtext = @"
+                                                                               
+  /###           /  /                         ##### ##                   ##    
+ /  ############/ #/                       ######  /### /                 ##   
+/     #########   ##                      /#   /  / ###/                  ##   
+#     /  #        ##                     /    /  /   ##                   ##   
+ ##  /  ##        ##                         /  /                         ##   
+    /  ###        ##  /##      /##          ## ##       ###  /###     ### ##   
+   ##   ##        ## / ###    / ###         ## ##        ###/ #### / ######### 
+   ##   ##        ##/   ###  /   ###        ## ######     ##   ###/ ##   ####  
+   ##   ##        ##     ## ##    ###       ## #####      ##    ##  ##    ##   
+   ##   ##        ##     ## ########        ## ##         ##    ##  ##    ##   
+    ##  ##        ##     ## #######         #  ##         ##    ##  ##    ##   
+     ## #      /  ##     ## ##                 /          ##    ##  ##    ##   
+      ###     /   ##     ## ####    /      /##/         / ##    ##  ##    /#   
+       ######/    ##     ##  ######/      /  ##########/  ###   ###  ####/     
+         ###       ##    ##   #####      /     ######      ###   ###  ###      
+                         /               #                                     
+                        /                 ##                                   
+                       /                                                       
+                      /                                       
+";
+                    Print(theendtext);
+                    Console.ReadKey();
+                    break;
+
+                }
+                else
+                {
+                    Encounters.RandomEncounter();
+                }
             }
         }
 
@@ -155,6 +206,7 @@ namespace DungeonOfMadness
             Console.ReadKey();
             Print("Slaughter the monsters within this dungeon, and speak the magic word '[R]un' to enter my realm");
             Print("and bestow upon me their ill gotten goods, and I shall empower you to defeat your captors!");
+            Print("Purchasing the Difficulty item will bring thou closer to the exit of this maddening dungeon!");
             Console.ReadKey();
             return p;
         }
@@ -202,7 +254,7 @@ namespace DungeonOfMadness
                     Console.WriteLine(p.id + " : " + p.name);
                 }
                
-                Print("Please Enter Player's Name or ID. (ID=# or Player's Name)");
+                Print("Please Enter Player's Name.");
                 Print("Entering 'create' will make a new save file.)");
                 string[] data = Console.ReadLine().Split(':');
 
@@ -254,6 +306,8 @@ namespace DungeonOfMadness
                     Console.ReadKey();
                 }
             }
+
+
             
 
         }

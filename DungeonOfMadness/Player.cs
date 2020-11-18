@@ -10,7 +10,7 @@ namespace DungeonOfMadness
 
         public string name;
         public int id;
-        public int coins = 3330;
+        public int coins = 10000;
         public int health = 10;
         public int damage = 1;
         public int armorClass = 0;
